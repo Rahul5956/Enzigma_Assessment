@@ -1,0 +1,38 @@
+package com.app.entity;
+
+import java.time.LocalDate;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+import lombok.Data;
+
+@Entity
+@Table(name ="admissions")
+@Data
+public class Admission {
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long id;
+	
+	private String learner_name;
+	
+	
+	private String course_name;
+	
+	private LocalDate admission_date;
+	
+	
+//	public Admission(String course_name, LocalDate admission_date)
+//	{
+//		super();
+//		this.course_name = course_name;
+//		this.admission_date=admission_date;
+//		
+//	}
+	
+}

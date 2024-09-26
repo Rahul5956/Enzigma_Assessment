@@ -1,0 +1,12 @@
+package com.app.Repository;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+import com.app.entity.Admission;
+
+@Repository
+public interface AdmisssionRepo extends JpaRepository<Admission, Long> {
+
+//	@Query("select * from admissions a where a.course_name = ? and a.admission_date = ? ")
+//	List<String> findByCourse_name_AdmissionDate(Admission admin);
+}

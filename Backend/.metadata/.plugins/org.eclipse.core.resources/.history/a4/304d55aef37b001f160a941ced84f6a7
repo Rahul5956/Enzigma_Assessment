@@ -1,0 +1,53 @@
+package com.app.Services;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import com.app.Repository.AdmisssionRepo;
+import com.app.entity.Task;
+
+@Service
+@Transactional
+public class AdmissionServiceImpl implements AdmissionService {
+	@Autowired
+	private AdmisssionRepo repo;
+
+	@Override
+	public List<Task> getAll() {
+		// TODO Auto-generated method stub
+		return repo.findAll();
+	}
+
+	@Override
+	public Task addnewAdmission(Task admission) {
+		
+		return repo.save(admission);
+	}
+
+//	@Override
+//	public List<String > getAllbyadmissionDate(String coursename, String date_of_admission) {
+//		
+//		Admission admin = new Admission(coursename, LocalDate.parse(date_of_admission));
+//		
+//		return repo.findByCourse_name_AdmissionDate(admin);
+//		
+//	
+//	}
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+}

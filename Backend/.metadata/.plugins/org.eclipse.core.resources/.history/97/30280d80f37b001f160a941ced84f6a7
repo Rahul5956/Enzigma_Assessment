@@ -1,0 +1,13 @@
+package com.app.Services;
+import java.util.List;
+
+import com.app.entity.Task;
+public interface  AdmissionService{
+
+	List<Task> getAll();
+
+	Task addnewAdmission(Task admission);
+
+	//List<String> getAllbyadmissionDate(String coursename, String date_of_admission);
+		
+}
